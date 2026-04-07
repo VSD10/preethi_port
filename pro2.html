@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zefora Watches — Case Study | Preethika</title>
+<meta name="description" content="Zefora Watches brand identity & web design case study by Preethika Vijayakumar">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--w:#FFFFFF;--s:#F4F4F7;--k:#0B0B12;--m:#72727F;--f:#A8A8B5;--a:#5B6FFF;--a2:#3D52FF;--ln:rgba(11,11,18,.08);--font:'Instrument Serif',Georgia,serif;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--w);color:var(--k);font-family:var(--font);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}img{display:block;max-width:100%;}
+
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--a);z-index:600;width:0%;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:var(--a);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,80px);background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--ln);}
+.n-back{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--m);transition:color .25s;}
+.n-back:hover{color:var(--a);}
+.n-title{font-style:italic;font-size:1rem;color:var(--k);}
+
+/* HERO — full bleed dark for luxury watch feel */
+.hero{min-height:100vh;padding-top:64px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;background:#08080F;}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(91,111,255,.15) 1px,transparent 1px);background-size:30px 30px;z-index:0;}
+/* big ghost behind */
+.hero::after{content:'ZW';position:absolute;right:-.04em;bottom:-.08em;font-size:30vw;font-style:italic;color:rgba(91,111,255,.04);pointer-events:none;line-height:1;user-select:none;z-index:0;}
+.h-left{display:flex;flex-direction:column;justify-content:center;padding:80px clamp(20px,5vw,80px);position:relative;z-index:2;}
+.h-badge{display:flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(91,111,255,.8);margin-bottom:36px;}
+.h-badge::before{content:'';width:28px;height:1px;background:var(--a);}
+.h-founded{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(91,111,255,.5);margin-bottom:14px;}
+.h-h1{font-size:clamp(3.5rem,7.5vw,8rem);line-height:.9;letter-spacing:-.03em;color:#fff;margin-bottom:28px;overflow:hidden;}
+.h-h1 .word{display:block;transform:translateY(110%);opacity:0;animation:wIn .9s cubic-bezier(.77,0,.18,1) forwards;}
+.h-h1 .word.ital{font-style:italic;color:rgba(91,111,255,.9);animation-delay:.12s;}
+@keyframes wIn{to{transform:translateY(0);opacity:1}}
+.h-desc{font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.45);line-height:1.85;max-width:420px;margin-bottom:40px;animation:fU .8s .35s both;}
+@keyframes fU{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.h-cta{display:inline-flex;align-items:center;gap:12px;padding:15px 34px;border:1.5px solid rgba(91,111,255,.5);color:rgba(91,111,255,.9);font-family:var(--font);font-size:.85rem;letter-spacing:.08em;position:relative;overflow:hidden;transition:color .35s;animation:fU .8s .5s both;width:fit-content;}
+.h-cta::after{content:'';position:absolute;inset:0;background:var(--a);transform:translateY(100%);transition:transform .35s cubic-bezier(.77,0,.18,1);z-index:-1;}
+.h-cta:hover{color:#fff;}
+.h-cta:hover::after{transform:translateY(0);}
+.h-right{position:relative;overflow:hidden;}
+.h-img{width:100%;height:100%;object-fit:cover;min-height:100vh;filter:grayscale(20%) contrast(1.1) brightness(.8);transition:transform .8s ease;}
+.h-right:hover .h-img{transform:scale(1.04);}
+.h-right::before{content:'';position:absolute;top:0;left:-2px;bottom:0;width:100px;z-index:3;background:linear-gradient(to right,#08080F,transparent);}
+.h-right::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(91,111,255,.1) 0%,transparent 60%);pointer-events:none;}
+.corner{position:absolute;top:0;right:0;width:3px;height:40%;background:var(--a);z-index:4;}
+
+/* HERITAGE */
+.heritage{display:flex;flex-wrap:wrap;background:var(--k);border-top:2px solid rgba(91,111,255,.2);}
+.ht{flex:1 1 140px;padding:32px 28px;border-right:1px solid rgba(91,111,255,.12);text-align:center;transition:background .3s;}
+.ht:last-child{border-right:none;}
+.ht:hover{background:rgba(91,111,255,.06);}
+.ht-n{font-size:2rem;font-style:italic;color:var(--a);line-height:1;margin-bottom:6px;}
+.ht-l{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);}
+
+/* META */
+.meta{display:flex;flex-wrap:wrap;background:var(--s);border-bottom:1px solid var(--ln);}
+.m-item{flex:1 1 150px;padding:30px 32px;border-right:1px solid var(--ln);transition:background .3s;}
+.m-item:last-child{border-right:none;}
+.m-item:hover{background:var(--w);}
+.mk{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--a);margin-bottom:10px;}
+.mv{font-size:1.05rem;font-style:italic;color:var(--k);}
+
+/* SECTIONS */
+.sec{padding:100px clamp(20px,5vw,80px);}
+.sec-alt{background:var(--s);}
+.s-tag{display:flex;align-items:center;gap:12px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--a);margin-bottom:20px;}
+.s-tag::before{content:'';width:22px;height:1px;background:var(--a);}
+.s-h{font-size:clamp(2rem,3.8vw,3rem);font-style:italic;line-height:1.06;letter-spacing:-.018em;margin-bottom:28px;}
+.s-h em{font-style:normal;color:var(--m);}
+.two-col{display:grid;grid-template-columns:1.4fr 0.6fr;gap:60px;align-items:start;}
+.body-p{font-size:1.08rem;font-style:italic;color:var(--m);line-height:1.9;margin-bottom:18px;}
+.body-p strong{font-style:normal;color:var(--k);}
+
+/* design decision list */
+.dec-box{background:var(--k);border:1px solid rgba(91,111,255,.15);padding:32px;}
+.dec-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--a);margin-bottom:20px;}
+.dec-item{padding:14px 0;border-bottom:1px solid rgba(91,111,255,.1);}
+.dec-item:last-child{border-bottom:none;}
+.dec-k{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(91,111,255,.7);margin-bottom:5px;}
+.dec-v{font-size:.9rem;font-style:italic;color:rgba(255,255,255,.5);}
+
+/* process */
+.proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;}
+.ps{padding:44px 36px;background:var(--w);border:1px solid var(--ln);position:relative;overflow:hidden;transition:background .3s;}
+.ps::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--a);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.77,0,.18,1);}
+.ps:hover{background:rgba(91,111,255,.03);}
+.ps:hover::after{transform:scaleX(1);}
+.ps-n{font-size:3rem;font-style:italic;color:rgba(91,111,255,.15);line-height:1;margin-bottom:18px;}
+.ps-t{font-size:1.15rem;font-style:italic;margin-bottom:12px;}
+.ps-p{font-size:.92rem;font-style:italic;color:var(--m);line-height:1.75;}
+
+/* GALLERY */
+.gallery{padding:80px 0;overflow:hidden;background:var(--k);border-top:3px solid var(--a);}
+.g-pad{padding:0 clamp(20px,5vw,80px);margin-bottom:40px;}
+.g-h{font-size:clamp(2rem,3.5vw,2.8rem);font-style:italic;color:#fff;}
+.g-h em{font-style:normal;color:rgba(91,111,255,.6);}
+.inf-wrap{overflow:hidden;height:280px;display:flex;align-items:center;}
+.inf-track{display:flex;animation:scrollG 28s linear infinite;}
+.inf-track:hover{animation-play-state:paused;}
+.inf-slide{width:380px;height:240px;margin:0 14px;flex-shrink:0;}
+.inf-slide img{width:100%;height:100%;object-fit:cover;filter:grayscale(25%);transition:transform .4s,filter .3s;}
+.inf-slide img:hover{transform:scale(1.05);filter:grayscale(0%);cursor:pointer;}
+@keyframes scrollG{0%{transform:translateX(0)}100%{transform:translateX(calc(-408px * 4))}}
+
+.site-footer{background:var(--k);border-top:1px solid rgba(91,111,255,.12);padding:26px clamp(20px,5vw,80px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.sf-b{font-style:italic;color:#fff;font-size:1rem;}
+.sf-c{font-size:.78rem;color:var(--m);}
+.sf-back{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--a);border:1px solid rgba(91,111,255,.3);padding:10px 22px;transition:all .25s;}
+.sf-back:hover{background:var(--a);color:#fff;border-color:var(--a);}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.4,0,.2,1);}
+.rv.in{opacity:1;transform:none;}
+.rv.d1{transition-delay:.1s;}.rv.d2{transition-delay:.22s;}.rv.d3{transition-delay:.35s;}
+
+@media(max-width:900px){.hero{grid-template-columns:1fr;}.h-right{height:60vw;}.two-col{grid-template-columns:1fr;}.proc-grid{grid-template-columns:1fr;}.heritage{flex-wrap:wrap;}.ht{flex:1 1 40%;}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<nav>
+  <a href="index.html" class="n-back"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+  <div class="n-title">Zefora Watches</div>
+</nav>
+
+<header class="hero">
+  <div class="h-left">
+    <div class="h-badge rv">Web &amp; Brand Identity</div>
+    <div class="h-founded rv">Est. 1894</div>
+    <h1 class="h-h1">
+      <span class="word">Zefora</span>
+      <span class="word ital">Watches</span>
+    </h1>
+    <p class="h-desc">Founded in 1894, Zefora has been at the forefront of horological innovation. We don't just make watches — we craft heritage that lasts for generations.</p>
+    <a class="h-cta rv" href="https://zefora-watches-b010f1.netlify.app/" target="_blank" rel="noopener">View Live Site <i class="fas fa-external-link-alt"></i></a>
+  </div>
+  <div class="h-right">
+    <div class="corner"></div>
+    <img class="h-img" src="asset/Gemini_Generated_Image_v3rxkkv3rxkkv3rx.png" alt="Zefora Watch">
+  </div>
+</header>
+
+<!-- heritage stats -->
+<div class="heritage">
+  <div class="ht rv"><div class="ht-n">1894</div><div class="ht-l">Founded</div></div>
+  <div class="ht rv d1"><div class="ht-n">130+</div><div class="ht-l">Years of Heritage</div></div>
+  <div class="ht rv d2"><div class="ht-n">48</div><div class="ht-l">Signature Models</div></div>
+  <div class="ht rv d3"><div class="ht-n">∞</div><div class="ht-l">Precision in Motion</div></div>
+</div>
+
+<div class="meta">
+  <div class="m-item rv"><div class="mk">Role</div><div class="mv">Web Developer</div></div>
+  <div class="m-item rv d1"><div class="mk">Tools</div><div class="mv">VS Code, Illustrator, Photoshop</div></div>
+  <div class="m-item rv d2"><div class="mk">Duration</div><div class="mv">2 Weeks</div></div>
+  <div class="m-item rv d3"><div class="mk">Type</div><div class="mv">Brand &amp; Web Build</div></div>
+</div>
+
+<section class="sec">
+  <div class="two-col">
+    <div>
+      <div class="s-tag rv">The Challenge</div>
+      <h2 class="s-h rv d1">Standing apart in a sea of <em>identical minimalism</em></h2>
+      <p class="body-p rv d2">Watch enthusiasts get lost in identical minimalist designs or complex technical specs. The goal for <strong>Zefora</strong> was a brand that feels authoritative and accessible — communicating craftsmanship without intimidation.</p>
+      <div class="s-tag rv" style="margin-top:48px">The Solution</div>
+      <h2 class="s-h rv d1">Precision-crafted for <em>digital luxury</em></h2>
+      <p class="body-p rv d2">A <strong>monochromatic, high-contrast palette</strong> — deep midnight blacks and periwinkle accents — paired with scroll-triggered reveals. Users feel the craftsmanship rather than just viewing a catalog. Typography mirrors the watch's dial.</p>
+    </div>
+    <div class="rv d2">
+      <div class="dec-box">
+        <div class="dec-label">Design Decisions</div>
+        <div class="dec-item"><div class="dec-k">Typography</div><div class="dec-v">Intricate serifs mirroring the watch dial's precision</div></div>
+        <div class="dec-item"><div class="dec-k">Color</div><div class="dec-v">Deep midnight &amp; cool periwinkle — cold luxury</div></div>
+        <div class="dec-item"><div class="dec-k">Animation</div><div class="dec-v">Scroll-triggered reveals, subtle parallax depth</div></div>
+        <div class="dec-item"><div class="dec-k">Iconography</div><div class="dec-v">Hyper-minimalist, geometric — echoes the dial</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="s-tag rv">Design Process</div>
+  <h2 class="s-h rv d1">Crafting the <em>heritage experience</em></h2>
+  <div class="proc-grid">
+    <div class="ps rv"><div class="ps-n">01</div><div class="ps-t">Brand Research</div><div class="ps-p">Studied Swiss watchmaking heritage, luxury competitor brands, and consumer psychology to identify the visual language Zefora needed to own.</div></div>
+    <div class="ps rv d1"><div class="ps-n">02</div><div class="ps-t">Identity System</div><div class="ps-p">Developed a complete visual identity — wordmark, monogram, color palette, typography system, and brand guidelines for consistent execution.</div></div>
+    <div class="ps rv d2"><div class="ps-n">03</div><div class="ps-t">Web Build</div><div class="ps-p">Built the live site with scroll animations, parallax layers, and an immersive product showcase that lets users feel the tactile luxury.</div></div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="g-pad">
+    <div class="s-tag rv" style="color:rgba(91,111,255,.5)">Visual Identity</div>
+    <h2 class="g-h rv d1">Brand <em>Showcase</em></h2>
+  </div>
+  <div class="inf-wrap">
+    <div class="inf-track">
+      <div class="inf-slide"><img src="asset/zephora jpg.jpg" alt="1"></div>
+      <div class="inf-slide"><img src="asset/zephora 2 jpg.jpg" alt="2"></div>
+      <div class="inf-slide"><img src="asset/stationary copy.png" alt="3"></div>
+      <div class="inf-slide"><img src="asset/tag mockup copy.png" alt="4"></div>
+      <div class="inf-slide"><img src="asset/staff.png" alt="5"></div>
+      <div class="inf-slide"><img src="asset/Billboard_Banner_Mockup copy.png" alt="6"></div>
+      <div class="inf-slide"><img src="asset/poster 1 copy.png" alt="7"></div>
+      <div class="inf-slide"><img src="asset/bag mockup copy.png" alt="8"></div>
+      <div class="inf-slide"><img src="asset/zephora jpg.jpg" alt="1"></div>
+      <div class="inf-slide"><img src="asset/zephora 2 jpg.jpg" alt="2"></div>
+      <div class="inf-slide"><img src="asset/stationary copy.png" alt="3"></div>
+      <div class="inf-slide"><img src="asset/tag mockup copy.png" alt="4"></div>
+      <div class="inf-slide"><img src="asset/staff.png" alt="5"></div>
+      <div class="inf-slide"><img src="asset/Billboard_Banner_Mockup copy.png" alt="6"></div>
+      <div class="inf-slide"><img src="asset/poster 1 copy.png" alt="7"></div>
+      <div class="inf-slide"><img src="asset/bag mockup copy.png" alt="8"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="sf-b">Preethika Vijayakumar</div>
+  <div class="sf-c">© 2026 · All Rights Reserved</div>
+  <a href="index.html" class="sf-back"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+</footer>
+
+<script>
+
+window.addEventListener('scroll',()=>{document.getElementById('prog').style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+'%';});
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
